@@ -3,7 +3,7 @@
 --
 -- This is a simple example of a module definition
 
-module Simple
+module Example
 where
 
 -- calculates the arithmetic mean of two numbers

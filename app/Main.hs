@@ -1,6 +1,8 @@
 module Main where
 
--- import Example
+import Example
+import Recursion
+
 -- import Lib
 import Data.Char
 
@@ -111,20 +113,6 @@ mangle value = (tail value) ++ [(head value)]
 -- Implement division on Int, divide :: Int -> Int -> Int using the list functions described in this section. Hint: first, write a function that returns all the multiples of a given number up to a specific limit.
 divide :: Int -> Int -> Int
 divide a b = quot a b
-
-
-natSum :: (Num a, Ord a) => a -> a
-natSum 0              = 0
-natSum n  | n > 0     = n + natSum (n - 1)
-          | otherwise = error "natSum: Input value too small!"
-
--- repeatN :: Int -> a -> [a]
--- repeatN 0 x  = []
--- repeatN n x  = x : repeatN (n - 1) x
-
-suffixes :: String -> [String]
-suffixes ""  = []
-suffixes str = str : suffixes (tail str)
 
 main :: IO ()
 main = do
